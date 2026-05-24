@@ -30,6 +30,7 @@ wandb/
 *.hdf5
 *.h5
 *.mp4
+!assets/443576559.mp4
 *.avi
 *.mov
 

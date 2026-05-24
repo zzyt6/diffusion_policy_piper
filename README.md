@@ -19,6 +19,12 @@ robot_eef_pose [2, 6]
 
 真机推理使用 Piper `JointCtrl` 位置控制，执行层使用 50Hz 线性插值和关节限幅来降低动作卡顿和单步跳变。
 
+## Demo
+
+Piper 真机 Diffusion Policy 推理演示：
+
+https://github.com/zzyt6/diffusion_policy_piper/blob/main/assets/443576559.mp4
+
 ## 项目结构
 
 ```text
