@@ -23,7 +23,15 @@ robot_eef_pose [2, 6]
 
 Piper 真机 Diffusion Policy 推理演示：
 
-https://github.com/zzyt6/diffusion_policy_piper/blob/main/assets/443576559.mp4
+<video src="assets/demos/piper_demo_01.mp4" controls muted playsinline width="360"></video>
+
+<video src="assets/demos/piper_demo_02.mp4" controls muted playsinline width="480"></video>
+
+<video src="assets/demos/piper_demo_03.mp4" controls muted playsinline width="480"></video>
+
+<video src="assets/demos/piper_demo_04.mp4" controls muted playsinline width="360"></video>
+
+<video src="assets/demos/piper_demo_05.mp4" controls muted playsinline width="360"></video>
 
 ## 项目结构
 
