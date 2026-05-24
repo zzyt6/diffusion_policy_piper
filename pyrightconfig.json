@@ -1,0 +1,16 @@
+{
+    "venvPath": "/home/gx4070/anaconda3/envs",
+    "venv": "diffusion",
+    "pythonVersion": "3.9",
+    "typeCheckingMode": "off",
+    "extraPaths": [
+        "."
+    ],
+    "exclude": [
+        "data/**",
+        "outputs/**",
+        "**/__pycache__/**"
+    ],
+    "reportMissingImports": "error",
+    "reportMissingModuleSource": "warning"
+}

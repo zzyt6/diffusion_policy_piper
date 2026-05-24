@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Training outputs and data
+data/
+outputs/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.pkl
+*.zarr/
+*.hdf5
+*.h5
+*.mp4
+*.avi
+*.mov
+
+# OS
+.DS_Store
+Thumbs.db

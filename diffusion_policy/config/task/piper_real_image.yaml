@@ -1,0 +1,50 @@
+name: piper_real_image
+
+image_shape: [3, 240, 320]
+dataset_path: /home/gx4070/Desktop/arm-datasets-collect/data/piper_xy
+
+shape_meta: &shape_meta
+  obs:
+    camera_wrist:
+      shape: ${task.image_shape}
+      type: rgb
+    camera_global:
+      shape: ${task.image_shape}
+      type: rgb
+    robot_qpos:
+      shape: [6]
+      type: low_dim
+    robot_eef_pose:
+      shape: [6]
+      type: low_dim
+  action:
+    shape: [6]
+
+env_runner:
+  _target_: diffusion_policy.env_runner.piper_image_runner.PiperImageRunner
+
+dataset:
+  _target_: diffusion_policy.dataset.piper_hdf5_image_dataset.PiperHdf5ImageDataset
+  shape_meta: *shape_meta
+  dataset_path: ${task.dataset_path}
+  horizon: ${horizon}
+  pad_before: ${eval:'${n_obs_steps}-1+${n_latency_steps}'}
+  pad_after: ${eval:'${n_action_steps}-1'}
+  n_obs_steps: ${dataset_obs_steps}
+  n_latency_steps: ${n_latency_steps}
+  seed: 42
+  val_ratio: 0.00
+  max_train_episodes: null
+  resize_images: True
+  image_obs_map:
+    camera_wrist: observations/images/wrist
+    camera_global: observations/images/global
+  lowdim_obs_map:
+    robot_qpos: observations/qpos
+    robot_eef_pose: observations/eef_pose
+  action_key: action
+  valid_keys:
+    - valid/wrist_camera
+    - valid/global_camera
+    - valid/robot_feedback
+    - valid/action
